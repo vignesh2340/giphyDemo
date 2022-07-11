@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VTl-Vq-UEh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Giphy-->
+        <scene sceneID="xXM-93-IpR">
+            <objects>
+                <navigationController id="bFj-pB-Srp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Giphy" id="K27-Fw-Vea"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ZD-Pw-5rf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0k2-cE-Lu1" kind="relationship" relationship="rootViewController" id="YQS-Yw-fgV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tq6-SG-EqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="-244"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="k0y-zg-sDC">
+            <objects>
+                <viewController storyboardIdentifier="FavouriteGiphyViewController" id="0Y3-ed-bFM" customClass="FavouriteGiphyViewController" customModule="Giphy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="soe-Ar-Fzg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GbW-Qr-Zwb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jLU-c9-ITX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0Y3-ed-bFM" id="V6D-1J-Yhb"/>
+                                    <outlet property="delegate" destination="0Y3-ed-bFM" id="nrJ-SF-qvb"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Dh-8c-mtV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GbW-Qr-Zwb" firstAttribute="top" secondItem="2Dh-8c-mtV" secondAttribute="top" id="DM6-16-of6"/>
+                            <constraint firstItem="2Dh-8c-mtV" firstAttribute="bottom" secondItem="GbW-Qr-Zwb" secondAttribute="bottom" id="ZnI-mg-kIU"/>
+                            <constraint firstItem="GbW-Qr-Zwb" firstAttribute="leading" secondItem="2Dh-8c-mtV" secondAttribute="leading" id="dvK-Fs-j5U"/>
+                            <constraint firstItem="2Dh-8c-mtV" firstAttribute="trailing" secondItem="GbW-Qr-Zwb" secondAttribute="trailing" id="fjn-LQ-ZYv"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="wAP-O0-aeF"/>
+                    <navigationItem key="navigationItem" id="qXa-1y-TMx"/>
+                    <connections>
+                        <outlet property="giphyCollectionView" destination="GbW-Qr-Zwb" id="8dE-Js-tXk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ew9-Wy-r06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2187" y="517"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="oPH-KX-kFo">
+            <objects>
+                <viewController storyboardIdentifier="GiphyListViewController" id="0k2-cE-Lu1" customClass="GiphyListViewController" customModule="Giphy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cxd-hP-ozo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-6f-Hvo">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BP6-wM-EOZ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0k2-cE-Lu1" id="Wip-MY-Vrn"/>
+                                    <outlet property="delegate" destination="0k2-cE-Lu1" id="vcr-DH-Tp8"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5WF-bk-cOY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5WF-bk-cOY" firstAttribute="trailing" secondItem="JdI-6f-Hvo" secondAttribute="trailing" id="8Zu-ts-pfI"/>
+                            <constraint firstItem="5WF-bk-cOY" firstAttribute="bottom" secondItem="JdI-6f-Hvo" secondAttribute="bottom" id="Gvy-0W-xpO"/>
+                            <constraint firstItem="JdI-6f-Hvo" firstAttribute="top" secondItem="5WF-bk-cOY" secondAttribute="top" id="UCs-qA-JaO"/>
+                            <constraint firstItem="JdI-6f-Hvo" firstAttribute="leading" secondItem="5WF-bk-cOY" secondAttribute="leading" id="tLf-eG-Sxv"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="VL4-0Q-zVf"/>
+                    <navigationItem key="navigationItem" id="eHe-bu-Ds4"/>
+                    <connections>
+                        <outlet property="giphyCollectionView" destination="JdI-6f-Hvo" id="amD-e0-b1I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M4h-aB-y7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2188" y="-244"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hxj-pd-hsy">
+            <objects>
+                <tabBarController id="VTl-Vq-UEh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FIT-8y-y8n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bFj-pB-Srp" kind="relationship" relationship="viewControllers" id="6yu-tE-2I1"/>
+                        <segue destination="jxJ-jR-iN6" kind="relationship" relationship="viewControllers" id="g0Y-Qy-gRA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4W-yP-VEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="124"/>
+        </scene>
+        <!--Fav-->
+        <scene sceneID="3Ds-g8-aEa">
+            <objects>
+                <navigationController id="jxJ-jR-iN6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Fav" id="ya1-2w-IYQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Uf-fW-KzU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0Y3-ed-bFM" kind="relationship" relationship="rootViewController" id="yPA-D5-4Tu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yds-Pp-BJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1291" y="517"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
